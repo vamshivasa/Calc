@@ -19,8 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9,
             buttonAdd, buttonSub, buttonM, buttonDiv, buttonEq, buttonC, buttonDot, buttonNeg;
-
-    TextView display;
+    TextView display1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         buttonC = findViewById(R.id.buttonC);
         buttonDot = findViewById(R.id.buttonDot);
         buttonNeg = findViewById(R.id.buttonNeg);
-        display = findViewById(R.id.display);
+        display1 = findViewById(R.id.display);
 
         resetDefaultValues();
 
@@ -176,19 +175,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (input.isEmpty() & ans != null) {
-
                     ans = -ans;
-                    display.setText(Double.toString(ans));
+                    display1.setText(Double.toString(ans));
                 } else if (input.isEmpty()) {
                     input = "-0";
-                    display.setText(input);
+                    display1.setText(input);
                 } else if (!input.equals("NaN")) {
                     if (input.startsWith("-")){
                         input = input.substring(1, input.length());
                     } else {
                         input = "-" + input;
                     }
-                    display.setText(input);
+                    display1.setText(input);
                 }
             }
         });
@@ -247,7 +245,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setDisplayText(String value) {
-        display.setText(value);
+        display1.setText(value);
     }
 
     private void resetDefaultValues(){
