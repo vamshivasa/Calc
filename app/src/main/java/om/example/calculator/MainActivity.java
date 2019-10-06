@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     String input;
     char operator;
 
-    Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9,
+    Button buttonzero, button1, button2, button3, button4, button5, button6, button7, button8, button9,
             buttonAdd, buttonSub, buttonMul, buttonDiv, buttonEq, buttonC, buttonDot, buttonNeg;
 
     TextView display;
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button0 = findViewById(R.id.button0);
+        buttonzero = findViewById(R.id.button0);
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         resetDefaultValues();
 
-        button0.setOnClickListener(new View.OnClickListener() {
+        buttonzero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 addCharToInput('0');
