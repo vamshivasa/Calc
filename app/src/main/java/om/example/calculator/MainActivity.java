@@ -12,11 +12,9 @@ import static java.lang.Double.NaN;
 public class MainActivity extends AppCompatActivity {
 
     final char ADD = '+', SUB = '-', MUL = 'x', DIV = '/', NO_OPERATOR = '\0';
-
     Double ans;
     String input;
     char operator;
-
     Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9,
             buttonAdd, buttonSub, buttonM, buttonDiv, buttonEq, buttonC, buttonDot, buttonNeg;
     TextView display1;
